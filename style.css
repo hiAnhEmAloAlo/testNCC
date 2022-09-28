@@ -36,6 +36,7 @@ body{
     
 }
 .listItem{
+    cursor: pointer;
     color: #AAAAAA;
     font-size: 1.6rem;
     font-weight: 700;
@@ -126,6 +127,10 @@ img{
     .wrapper{
         flex-direction: column;
     }
+    .logo{
+        width: 15.5rem;
+        height: 6.1rem;
+    }
     .container{
         width: 100%;
     }
@@ -134,8 +139,11 @@ img{
     }
     .sideBarTap__Mobi{
         display: block;
+        padding: 1rem 2rem;
         width: 100%;
         height: 1rem;
+        position: relative;
+        cursor: pointer;
     }
     .wrapperGroup{
         flex-wrap: wrap;
@@ -146,7 +154,19 @@ img{
     .group1{
         margin: 0 var(--size-margin-taplet) 2rem;
     }
-    
+    .sideBarTap__Mobi .list{
+        position: absolute;
+        top: 0;
+        left: 0;
+        border: 1px solid;
+        background-color: #191718;
+        display: none;
+        height: 100vh;
+        width: 50%;
+    }
+    #icon:hover .list{
+        display: block;
+    }
     .groupItem{
         margin-bottom: 2rem;
         width: 100%;
@@ -154,18 +174,16 @@ img{
     
 }
 
-@media screen and (max-width:320) {
+@media screen and (max-width:423px) {
     
+
     .wrapperGroup,.footer{
         padding: 0 var(--size-margin-mobile);
     }
     .group1{
         margin: 0 var(--size-margin-mobile) 2rem;
     }
-    
-    /* .groupItem{
-        margin-bottom: 2rem;
-        width: 100%;
-    } */
-    
+    .sideBarTap__Mobi .list{
+        width: 50%;
+    }
 }
